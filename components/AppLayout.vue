@@ -13,13 +13,19 @@ const { path } = useRoute()
 const { bitfield } = useAppConfig()
 const { page } = useContent()
 
-useHead({
-  titleTemplate: (subtitle) => {
-    return subtitle
-      ? `${subtitle} || ${bitfield.title}`
-      : `${bitfield.title}`;
-  },
-})
+if (path === '/') {
+  useHead({
+    title: () => bitfield.title
+  })
+} else {
+  useHead({
+    titleTemplate: (subtitle) => {
+      return subtitle
+        ? `${subtitle} || ${bitfield.title}`
+        : `${bitfield.title}`;
+    },
+  })
+}
 
 useSeoMeta({
   ogUrl: () => {
