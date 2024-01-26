@@ -23,7 +23,10 @@ type BitfieldAppConfig = {
    * Whether to show the Built with Nuxt string.
    */
   generator?: boolean
-  navigation: BitfieldNavigation[]
+  /**
+   * A list of navigation items.
+   */
+  navigation?: BitfieldNavigation[]
 }
 
 type BitfieldNavigation = {

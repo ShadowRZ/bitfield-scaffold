@@ -10,7 +10,7 @@ const { bitfield } = useAppConfig()
     items="center"
     py="4"
   >
-    <nav v-if="bitfield.navigation?.length > 0">
+    <nav v-if="bitfield.navigation && bitfield.navigation?.length > 0">
       <ul
         flex="~ row"
         gap="2"
