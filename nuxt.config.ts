@@ -16,6 +16,9 @@ export default defineNuxtConfig({
   },
   content: {
     documentDriven: true,
+    markdown: {
+      remarkPlugins: ['remark-reading-time'],
+    },
     highlight: {
       theme: {
         default: 'vitesse-light',

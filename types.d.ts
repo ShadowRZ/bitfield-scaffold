@@ -27,6 +27,16 @@ type BitfieldAppConfig = {
    * A list of navigation items.
    */
   navigation?: BitfieldNavigation[]
+  /**
+   * Show reading times?
+   * @default false
+   */
+  readingTime?: boolean
+  /**
+   * Show word count?
+   * @default false
+   */
+  wordCount?: boolean
 }
 
 type BitfieldNavigation = {

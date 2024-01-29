@@ -2,6 +2,8 @@
 const { page } = defineProps<{
   page: any
 }>()
+
+const { bitfield } = useAppConfig()
 </script>
 
 <template>
@@ -57,5 +59,33 @@ const { page } = defineProps<{
         >{{ tag }}</span>
       </div>
     </template>
+    <div
+      v-if="bitfield.readingTime"
+      inline-flex
+      gap="1"
+      items="center"
+    >
+      <Icon name="ph:clock-duotone" />
+      <span sr-only>Reading Time: </span>
+      <span
+        font="bold"
+        flex="~ row"
+        gap="1"
+      >{{ page.readingTime.text }}</span>
+    </div>
+    <div
+      v-if="bitfield.wordCount"
+      inline-flex
+      gap="1"
+      items="center"
+    >
+      <Icon name="ph:article-duotone" />
+      <span sr-only>Word Count: </span>
+      <span
+        font="bold"
+        flex="~ row"
+        gap="1"
+      >{{ page.readingTime.words }} words</span>
+    </div>
   </div>
 </template>

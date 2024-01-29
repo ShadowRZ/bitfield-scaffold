@@ -12,6 +12,8 @@ export default defineAppConfig({
         name: 'Home',
         to: '/'
       }
-    ]
+    ],
+    readingTime: true,
+    wordCount: true
   } as BitfieldAppConfig
 })
