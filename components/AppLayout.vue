@@ -56,7 +56,11 @@ useContentHead(page)
       :content="page?.description ? page?.description : bitfield.description"
     />
   </Head>
-  <NuxtLoadingIndicator />
+  <NuxtLoadingIndicator
+    color="false"
+    :height="4"
+    bg="pink-800 dark:pink-200"
+  />
   <div
     flex="~ col"
     min-h="dvh"
