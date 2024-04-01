@@ -4,7 +4,10 @@ const { page: thisPage } = useContent()
 
 <template>
   <div mb="24">
-    <header py="32">
+    <header
+      py="16"
+      xl="py-32"
+    >
       <h1
         font="bold"
         text="4xl xl:7xl"
