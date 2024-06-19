@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { page } = defineProps<{
-  page: any
+  page: ParsedContent
 }>()
 
 const { bitfield } = useAppConfig()

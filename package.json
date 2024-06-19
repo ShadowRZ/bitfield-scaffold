@@ -14,8 +14,8 @@
     "postinstall": "nuxt prepare .playground"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.2.0",
-    "eslint": "^8.56.0",
+    "@nuxt/eslint": "^0.3.13",
+    "eslint": "^9.5.0",
     "nuxt": "^3.12.2",
     "typescript": "^5.3.3"
   },
