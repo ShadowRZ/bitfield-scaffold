@@ -3,11 +3,6 @@ import "@unocss/reset/tailwind-compat.css"
 import "@fontsource-variable/jost"
 import "@fontsource-variable/jetbrains-mono"
 
-import { useWindowScroll } from "@vueuse/core"
-
-const { y } = useWindowScroll()
-const showTop = computed(() => y.value >= 100)
-
 const url = useRequestURL()
 const { path } = useRoute()
 const { bitfield } = useAppConfig()
@@ -73,16 +68,6 @@ useContentHead(page)
     </div>
     <AppFooter />
   </div>
-  <Transition
-    enter-active-class="transition duration-200 ease-out"
-    enter-from-class="translate-y-1 opacity-0"
-    enter-to-class="translate-y-0 opacity-100"
-    leave-active-class="transition duration-150 ease-in"
-    leave-from-class="translate-y-0 opacity-100"
-    leave-to-class="translate-y-1 opacity-0"
-  >
-    <ScrollToTop v-if="showTop" />
-  </Transition>
 </template>
 
 <style>
