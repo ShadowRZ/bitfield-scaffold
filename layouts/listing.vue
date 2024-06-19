@@ -8,18 +8,20 @@ const { page: thisPage } = useContent()
       py="16"
       xl="py-32"
     >
-      <h1
-        font="bold"
-        text="4xl xl:7xl"
-      >
-        {{ thisPage.title }}
-      </h1>
-      <p
-        text-xl
-        xl="text-2xl"
-      >
-        {{ thisPage.description }}
-      </p>
+      <section flex="~ col" gap="2">
+        <h1
+          font="bold"
+          text="4xl xl:7xl"
+        >
+          {{ thisPage.title }}
+        </h1>
+        <p
+          text-xl
+          xl="text-2xl"
+        >
+          {{ thisPage.description }}
+        </p>
+      </section>
       <section
         prose
         max-w-full
