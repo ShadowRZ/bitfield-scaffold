@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ParsedContent } from '@nuxt/content'
+
 const { page } = defineProps<{
   page: ParsedContent
 }>()

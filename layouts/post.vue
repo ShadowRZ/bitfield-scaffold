@@ -3,26 +3,16 @@ const { page } = useContent()
 </script>
 
 <template>
-  <div
-    text-base
-    xl="text-xl"
-    pt="32"
+  <ShortPost
+    v-if="page.short"
+    :page="page"
   >
-    <PostMetas :page="page" />
-    <main
-      grow
-      prose
-      max-w-full
-    >
-      <h1 font="bold">
-        {{ page.title }}
-      </h1>
-      <div flex="~ col lg:row-reverse">
-        <TOCContainer />
-        <section grow>
-          <slot />
-        </section>
-      </div>
-    </main>
-  </div>
+    <slot />
+  </ShortPost>
+  <LongPost
+    v-else
+    :page="page"
+  >
+    <slot />
+  </LongPost>
 </template>

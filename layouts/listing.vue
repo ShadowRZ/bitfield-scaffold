@@ -50,28 +50,36 @@ const { page: thisPage } = useContent()
           flex="~ col"
           gap="1"
         >
-          <PostMetas
-            v-if="thisPage.metas"
+          <ShortPost
+            v-if="page.short"
             :page="page"
-          />
-          <NuxtLink
-            max-w="fit"
-            :href="page._path"
           >
-            <WithUnderline
-              is="h2"
-              transition="all"
-              duration="200"
-              font="bold"
-              text="3xl xl:5xl"
-              class="bg-underline-large inline"
+            <ContentRenderer :value="page" />
+          </ShortPost>
+          <template v-else>
+            <PostMetas
+              v-if="thisPage.metas"
+              :page="page"
+            />
+            <NuxtLink
+              max-w="fit"
+              :href="page._path"
             >
-              {{ page.title }}
-            </WithUnderline>
-          </NuxtLink>
-          <p mt="2">
-            {{ page.description }}
-          </p>
+              <WithUnderline
+                is="h2"
+                transition="all"
+                duration="200"
+                font="bold"
+                text="3xl xl:5xl"
+                class="bg-underline-large inline"
+              >
+                {{ page.title }}
+              </WithUnderline>
+            </NuxtLink>
+            <p mt="2">
+              {{ page.description }}
+            </p>
+          </template>
         </section>
       </ContentList>
     </main>
