@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const toTop = (event: Event) => {
-  event.preventDefault();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+  event.preventDefault()
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 </script>
 
 <template>

@@ -2,15 +2,16 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    "@nuxt/content",
-    "@nuxtjs/color-mode",
-    "@vueuse/nuxt",
-    "@unocss/nuxt",
-    "@nuxt/eslint",
-    "@nuxt/icon"
+    '@nuxt/content',
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
+    '@unocss/nuxt',
+    '@nuxt/eslint',
+    '@nuxt/icon',
+    '@nuxt/image',
   ],
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
   },
   typescript: {
     strict: true,
@@ -24,8 +25,17 @@ export default defineNuxtConfig({
       theme: {
         default: 'vitesse-light',
         light: 'vitesse-light',
-        dark: 'vitesse-black'
-      }
-    }
-  }
+        dark: 'vitesse-black',
+      },
+    },
+  },
+  eslint: {
+    config: {
+      stylistic: {
+        indent: 2,
+        quotes: 'single',
+        semi: false,
+      },
+    },
+  },
 })

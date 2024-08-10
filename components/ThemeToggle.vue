@@ -1,22 +1,23 @@
 <script setup lang="ts">
 const colors = [
   {
-    id: "system",
-    icon: "ph:monitor-duotone",
-    title: "System",
+    id: 'system',
+    icon: 'ph:monitor-duotone',
+    title: 'System',
   },
   {
-    id: "light",
-    icon: "ph:sun-duotone",
-    title: "Light",
+    id: 'light',
+    icon: 'ph:sun-duotone',
+    title: 'Light',
   },
   {
-    id: "dark",
-    icon: "ph:moon-duotone",
-    title: "Dark",
+    id: 'dark',
+    icon: 'ph:moon-duotone',
+    title: 'Dark',
   },
-];
+]
 </script>
+
 <template>
   <ul
     flex="~ row"

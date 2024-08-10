@@ -1,4 +1,4 @@
-import type BitfieldAppConfig from "./types"
+import type BitfieldAppConfig from './types'
 
 export default defineAppConfig({
   bitfield: {
@@ -6,7 +6,7 @@ export default defineAppConfig({
     title: 'Example Title',
     description: 'Example description',
     generator: true,
-  } as BitfieldAppConfig
+  } as BitfieldAppConfig,
 })
 
 declare module '@nuxt/schema' {

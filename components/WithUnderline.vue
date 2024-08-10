@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
-  is: Component | string;
-}>();
+  is: Component | string
+}>()
 </script>
 
 <template>

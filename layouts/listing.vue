@@ -8,7 +8,10 @@ const { page: thisPage } = useContent()
       py="16"
       xl="py-32"
     >
-      <section flex="~ col" gap="2">
+      <section
+        flex="~ col"
+        gap="2"
+      >
         <h1
           font="bold"
           text="4xl xl:7xl"

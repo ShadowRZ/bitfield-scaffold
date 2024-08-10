@@ -1,4 +1,4 @@
-import type BitfieldAppConfig from "../types"
+import type BitfieldAppConfig from '../types'
 
 export default defineAppConfig({
   bitfield: {
@@ -10,10 +10,10 @@ export default defineAppConfig({
       {
         icon: 'ph:house-duotone',
         name: 'Home',
-        to: '/'
-      }
+        to: '/',
+      },
     ],
     readingTime: true,
-    wordCount: true
-  } as BitfieldAppConfig
+    wordCount: true,
+  } as BitfieldAppConfig,
 })

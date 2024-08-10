@@ -4,9 +4,11 @@ const { bitfield } = useAppConfig()
 const copyright = computed(() => {
   if (typeof bitfield?.copyright === 'string') {
     return bitfield?.copyright
-  } else if (typeof bitfield.copyright === 'function') {
+  }
+  else if (typeof bitfield.copyright === 'function') {
     return bitfield.copyright(new Date())
-  } else {
+  }
+  else {
     return `© ${bitfield.title ?? '[No Titie]'}`
   }
 })

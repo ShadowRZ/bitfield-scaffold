@@ -6,12 +6,12 @@ const shown = computed(() => layout.value !== 'listing')
 
 if (shown.value) {
   useHead({
-    title: title()
+    title: title(),
   })
 
   useSeoMeta({
     ogTitle: title(),
-    twitterTitle: title()
+    twitterTitle: title(),
   })
 }
 </script>

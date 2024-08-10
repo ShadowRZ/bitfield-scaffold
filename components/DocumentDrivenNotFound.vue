@@ -3,12 +3,12 @@ const route = useRoute()
 const title = () => `[No Document on ${route.path}]`
 
 useHead({
-  title: title()
+  title: title(),
 })
 
 useSeoMeta({
   ogTitle: title(),
-  twitterTitle: title()
+  twitterTitle: title(),
 })
 </script>
 

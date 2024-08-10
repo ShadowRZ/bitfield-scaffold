@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import "@unocss/reset/tailwind-compat.css"
-import "@fontsource-variable/jost"
-import "@fontsource-variable/jetbrains-mono"
+import '@unocss/reset/tailwind-compat.css'
+import '@fontsource-variable/jost'
+import '@fontsource-variable/jetbrains-mono'
 
 const url = useRequestURL()
 const { path } = useRoute()
@@ -10,14 +10,15 @@ const { page } = useContent()
 
 if (path === '/') {
   useHead({
-    title: () => bitfield.title
+    title: () => bitfield.title,
   })
-} else {
+}
+else {
   useHead({
     titleTemplate: (subtitle) => {
       return subtitle
         ? `${subtitle} || ${bitfield.title}`
-        : `${bitfield.title}`;
+        : `${bitfield.title}`
     },
   })
 }
@@ -26,7 +27,7 @@ useSeoMeta({
   ogUrl: () => {
     if (bitfield.baseURL) return concatURLParts(bitfield.baseURL, path)
     else return url.toString()
-  }
+  },
 })
 
 useContentHead(page)
