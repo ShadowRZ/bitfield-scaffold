@@ -44,5 +44,23 @@ export default defineNuxtConfig({
     },
   },
 
+  icon: {
+    clientBundle: {
+      icons: [
+        'ph:check-bold',
+        'ph:anchor-simple-duotone',
+        'ph:calendar-duotone',
+        'ph:folders-duotone',
+        'ph:tag-duotone',
+        'ph:clock-duotone',
+        'ph:article-duotone',
+        'ph:copy-duotone',
+        'ph:monitor-duotone',
+        'ph:sun-duotone',
+        'ph:moon-duotone',
+      ],
+    },
+  },
+
   compatibilityDate: '2024-08-10',
 })
